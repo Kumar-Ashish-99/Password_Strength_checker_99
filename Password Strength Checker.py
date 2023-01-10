@@ -1,24 +1,22 @@
 import re
 
 def uppercase_check(password):
-    if re.search('[A-Z]', password): #atleast one uppercase character
+    if re.search('[A-Z]', password):
         return True
     return False
 
 def lowercase_check(password):
-    if re.search('[a-z]', password): #atleast one lowercase character
+    if re.search('[a-z]', password):
         return True
     return False
 
 def digit_check(password):
-    if re.search('[0-9]', password): #atleast one digit
+    if re.search('[0-9]', password):
         return True
     return False
 
-
 def user_input_password_check():
     password = input("Enter password : ")
-        #atleast 8 character long
     if len(password) >= 8 and uppercase_check(password) and lowercase_check(password) and digit_check(password):
         print("Strong Password")
     else:
